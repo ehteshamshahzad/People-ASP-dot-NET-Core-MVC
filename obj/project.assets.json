@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ehteshamshahzad/Desktop/Project/src/People/People.csproj",
+      "projectUniqueName": "/Users/ehteshamshahzad/Desktop/Project/People/People.csproj",
       "projectName": "People",
-      "projectPath": "/Users/ehteshamshahzad/Desktop/Project/src/People/People.csproj",
+      "projectPath": "/Users/ehteshamshahzad/Desktop/Project/People/People.csproj",
       "packagesPath": "/Users/ehteshamshahzad/.nuget/packages/",
-      "outputPath": "/Users/ehteshamshahzad/Desktop/Project/src/People/obj/",
+      "outputPath": "/Users/ehteshamshahzad/Desktop/Project/People/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ehteshamshahzad/.nuget/NuGet/NuGet.Config"
