@@ -14,5 +14,7 @@ namespace People.Data
         
         public DbSet<Person> People { get; set; }
         public DbSet<Name> Name { get; set; }
+        public DbSet<PhoneNumber> PhoneNumber { get; set; }
+
     }
 }

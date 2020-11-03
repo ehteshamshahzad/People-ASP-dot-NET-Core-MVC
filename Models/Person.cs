@@ -13,9 +13,8 @@ namespace People.Models
 
         public Name PersonName { get; set; }
 
-        [DataType(DataType.PhoneNumber)]
-        public string PhoneNumber { get; set; }
-        
+        public List<PhoneNumber> PhoneNumbers { get; set; }
+
         [EmailAddress]
         public string Email { get; set; }
         
