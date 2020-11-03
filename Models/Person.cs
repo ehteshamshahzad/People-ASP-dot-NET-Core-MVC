@@ -11,9 +11,7 @@ namespace People.Models
     {
         public int ID { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Name { get; set; }
+        public Name PersonName { get; set; }
 
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
