@@ -13,5 +13,6 @@ namespace People.Data
         : base(options) { }
         
         public DbSet<Person> People { get; set; }
+        public DbSet<Name> Name { get; set; }
     }
 }
