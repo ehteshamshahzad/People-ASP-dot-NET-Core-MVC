@@ -13,6 +13,7 @@ namespace People.Models
 
         [StringLength(100)]
         public string Location { get; set; }
+
         public List<PersonAddress> PersonAddresses { get; set; }
     }
 }

@@ -9,6 +9,10 @@ namespace People.Models
 {
     public class PersonGroup
     {
-        
+        public int PersonID { get; set; }
+        public Person Person { get; set; }
+
+        public int GroupID { get; set; }
+        public Group Group { get; set; }
     }
 }

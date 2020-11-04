@@ -16,7 +16,9 @@ namespace People.Models
 
         [EmailAddress]
         public string Email { get; set; }
+
         public List<PersonAddress> PersonAddresses { get; set; }
 
+        public List<PersonGroup> PersonGroups { get; set; }
     }
 }
