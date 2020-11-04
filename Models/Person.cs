@@ -18,6 +18,5 @@ namespace People.Models
         public string Email { get; set; }
         public List<PersonAddress> PersonAddresses { get; set; }
 
-
     }
 }
