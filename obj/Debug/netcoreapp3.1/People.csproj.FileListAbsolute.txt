@@ -168,3 +168,8 @@
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/People/Create.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/People/Delete.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/People/Details.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/People/Edit.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/People/Index.cshtml.g.cs

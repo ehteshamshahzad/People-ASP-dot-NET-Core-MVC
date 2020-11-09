@@ -10,10 +10,14 @@ namespace People.Models
     {
         public int ID { get; set; }
 
-        public Name PersonName { get; set; }
+        [StringLength(50)]
+        public string FullName { get; set; }
 
-        public List<PhoneNumber> PhoneNumbers { get; set; }
-
+        [DataType(DataType.PhoneNumber)]
+        public string PrimaryNumber { get; set; }
+        
+        public List<PhoneNumber> SecondaryNumbers { get; set; }
+ 
         [EmailAddress]
         public string Email { get; set; }
 

@@ -13,7 +13,6 @@ namespace People.Data
         : base(options) { }
         
         public DbSet<Person> People { get; set; }
-        public DbSet<Name> Names { get; set; }
         public DbSet<PhoneNumber> PhoneNumbers { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Group> Groups { get; set; }

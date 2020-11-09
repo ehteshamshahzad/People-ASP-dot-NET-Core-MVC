@@ -27,7 +27,7 @@ namespace People
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<PeopleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PeopleContext")));
+            services.AddDbContext<PeopleContext>(options => options.UseSqlite(Configuration.GetConnectionString("PeopleContext")));
 
         }
 

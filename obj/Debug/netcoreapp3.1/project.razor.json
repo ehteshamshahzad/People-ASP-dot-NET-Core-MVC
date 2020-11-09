@@ -14392,13 +14392,38 @@
   "RootNamespace": "People",
   "Documents": [
     {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/People/Delete.cshtml",
+      "TargetPath": "Views\\People\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/People/Details.cshtml",
+      "TargetPath": "Views\\People\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/People/Index.cshtml",
+      "TargetPath": "Views\\People\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/People/Create.cshtml",
+      "TargetPath": "Views\\People\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/People/Edit.cshtml",
+      "TargetPath": "Views\\People\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
