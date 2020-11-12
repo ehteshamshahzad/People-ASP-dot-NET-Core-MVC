@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using People.Data;
 
 namespace People
 {
@@ -24,6 +26,8 @@ namespace People
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<UsersContext>(options =>options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,3 +59,4 @@ namespace People
         }
     }
 }
+// dotnet aspnet-codegenerator controller -name UsersController -m User -dc UsersContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
