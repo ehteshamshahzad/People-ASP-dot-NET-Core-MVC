@@ -60,3 +60,6 @@ namespace People
     }
 }
 // dotnet aspnet-codegenerator controller -name UsersController -m User -dc UsersContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+// dotnet-ef migrations add InitialCreate
+// dotnet ef database update
+
