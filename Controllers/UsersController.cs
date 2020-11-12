@@ -58,6 +58,7 @@ namespace People.Controllers
         {
             if (ModelState.IsValid)
             {
+                user.IsActive = true;
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
