@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ehteshamshahzad/Desktop/Project/src/People/People.csproj": {}
+    "/Users/ehteshamshahzad/Desktop/Project/People/People.csproj": {}
   },
   "projects": {
-    "/Users/ehteshamshahzad/Desktop/Project/src/People/People.csproj": {
+    "/Users/ehteshamshahzad/Desktop/Project/People/People.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ehteshamshahzad/Desktop/Project/src/People/People.csproj",
+        "projectUniqueName": "/Users/ehteshamshahzad/Desktop/Project/People/People.csproj",
         "projectName": "People",
-        "projectPath": "/Users/ehteshamshahzad/Desktop/Project/src/People/People.csproj",
+        "projectPath": "/Users/ehteshamshahzad/Desktop/Project/People/People.csproj",
         "packagesPath": "/Users/ehteshamshahzad/.nuget/packages/",
-        "outputPath": "/Users/ehteshamshahzad/Desktop/Project/src/People/obj/",
+        "outputPath": "/Users/ehteshamshahzad/Desktop/Project/People/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ehteshamshahzad/.nuget/NuGet/NuGet.Config"
@@ -35,6 +35,34 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
