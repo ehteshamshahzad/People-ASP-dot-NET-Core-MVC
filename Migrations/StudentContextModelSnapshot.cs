@@ -38,6 +38,25 @@ namespace People.Migrations
                     b.ToTable("ContactInfos");
                 });
 
+            modelBuilder.Entity("People.Models.Department", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("DepartmentName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("HOD")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Departments");
+                });
+
             modelBuilder.Entity("People.Models.Student", b =>
                 {
                     b.Property<int>("ID")
@@ -46,6 +65,9 @@ namespace People.Migrations
 
                     b.Property<double>("CGPA")
                         .HasColumnType("REAL");
+
+                    b.Property<int>("DepartmentID")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("FullName")
                         .IsRequired()
@@ -57,6 +79,8 @@ namespace People.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("DepartmentID");
+
                     b.ToTable("Students");
                 });
 
@@ -65,6 +89,15 @@ namespace People.Migrations
                     b.HasOne("People.Models.Student", "Student")
                         .WithOne("ContactInfo")
                         .HasForeignKey("People.Models.ContactInfo", "StudentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("People.Models.Student", b =>
+                {
+                    b.HasOne("People.Models.Department", "Department")
+                        .WithMany("Student")
+                        .HasForeignKey("DepartmentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

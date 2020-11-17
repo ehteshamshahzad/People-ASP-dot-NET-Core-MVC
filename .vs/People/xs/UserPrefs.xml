@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{BAE2324A-8EFF-4ABF-82DE-8FC4B0D3BFDC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Student.cs">
+    <Files>
+      <File FileName="Models/Department.cs" Line="21" Column="18" />
+      <File FileName="Models/Student.cs" Line="28" Column="37" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="People" expanded="True">
+            <Node name="People" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Student.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.People PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

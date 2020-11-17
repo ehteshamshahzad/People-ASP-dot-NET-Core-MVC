@@ -23,5 +23,8 @@ namespace People.Models
         public double CGPA { get; set; }
 
         public ContactInfo ContactInfo { get; set; }
+
+        public int DepartmentID { get; set; }
+        public Department Department { get; set; }
     }
 }

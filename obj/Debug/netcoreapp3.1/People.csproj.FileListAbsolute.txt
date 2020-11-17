@@ -1,6 +1,5 @@
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/appsettings.json
-/Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/People.deps.json
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/People.runtimeconfig.json
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/People.runtimeconfig.dev.json
@@ -174,8 +173,14 @@
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/ContactInfos/Details.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/ContactInfos/Edit.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/ContactInfos/Index.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Departments/Create.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Departments/Delete.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Departments/Details.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Departments/Edit.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Departments/Index.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Students/Create.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Students/Delete.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Students/Details.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Students/Edit.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Students/Index.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/scopedcss/bundle/People.styles.css
