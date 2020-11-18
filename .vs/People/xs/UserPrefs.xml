@@ -1,16 +1,20 @@
 ﻿<Properties StartupConfiguration="{BAE2324A-8EFF-4ABF-82DE-8FC4B0D3BFDC}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Student.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/StudentTeacher.cs">
     <Files>
-      <File FileName="Models/Department.cs" Line="21" Column="18" />
-      <File FileName="Models/Student.cs" Line="28" Column="37" />
+      <File FileName="Models/Department.cs" Line="21" Column="38" />
+      <File FileName="Models/Student.cs" Line="19" Column="15" />
+      <File FileName="Data/StudentContext.cs" Line="17" Column="28" />
+      <File FileName="Models/Teacher.cs" Line="9" Column="18" />
+      <File FileName="Models/StudentTeacher.cs" Line="9" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="People" expanded="True">
             <Node name="People" expanded="True">
+              <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="Student.cs" selected="True" />
+                <Node name="StudentTeacher.cs" selected="True" />
               </Node>
             </Node>
           </Node>

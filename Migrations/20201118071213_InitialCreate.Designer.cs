@@ -8,7 +8,7 @@ using People.Data;
 namespace People.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    [Migration("20201117224928_InitialCreate")]
+    [Migration("20201118071213_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -86,6 +86,36 @@ namespace People.Migrations
                     b.ToTable("Students");
                 });
 
+            modelBuilder.Entity("People.Models.StudentTeacher", b =>
+                {
+                    b.Property<int>("StudentID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TeacherID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("StudentID", "TeacherID");
+
+                    b.HasIndex("TeacherID");
+
+                    b.ToTable("StudentTeachers");
+                });
+
+            modelBuilder.Entity("People.Models.Teacher", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Teachers");
+                });
+
             modelBuilder.Entity("People.Models.ContactInfo", b =>
                 {
                     b.HasOne("People.Models.Student", "Student")
@@ -100,6 +130,21 @@ namespace People.Migrations
                     b.HasOne("People.Models.Department", "Department")
                         .WithMany("Student")
                         .HasForeignKey("DepartmentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("People.Models.StudentTeacher", b =>
+                {
+                    b.HasOne("People.Models.Student", "Student")
+                        .WithMany("StudentTeachers")
+                        .HasForeignKey("StudentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("People.Models.Teacher", "Teacher")
+                        .WithMany("StudentTeachers")
+                        .HasForeignKey("TeacherID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

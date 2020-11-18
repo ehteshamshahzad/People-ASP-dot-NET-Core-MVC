@@ -14392,6 +14392,36 @@
   "RootNamespace": "People",
   "Documents": [
     {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Teachers/Create.cshtml",
+      "TargetPath": "Views\\Teachers\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/StudentTeachers/Edit.cshtml",
+      "TargetPath": "Views\\StudentTeachers\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Teachers/Details.cshtml",
+      "TargetPath": "Views\\Teachers\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/StudentTeachers/Index.cshtml",
+      "TargetPath": "Views\\StudentTeachers\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Teachers/Delete.cshtml",
+      "TargetPath": "Views\\Teachers\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/StudentTeachers/Create.cshtml",
+      "TargetPath": "Views\\StudentTeachers\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Students/Index.cshtml",
       "TargetPath": "Views\\Students\\Index.cshtml",
       "FileKind": "mvc"
@@ -14409,6 +14439,11 @@
     {
       "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/ContactInfos/Create.cshtml",
       "TargetPath": "Views\\ContactInfos\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Teachers/Index.cshtml",
+      "TargetPath": "Views\\Teachers\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14457,6 +14492,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/StudentTeachers/Delete.cshtml",
+      "TargetPath": "Views\\StudentTeachers\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Students/Create.cshtml",
       "TargetPath": "Views\\Students\\Create.cshtml",
       "FileKind": "mvc"
@@ -14464,6 +14504,11 @@
     {
       "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Students/Delete.cshtml",
       "TargetPath": "Views\\Students\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/StudentTeachers/Details.cshtml",
+      "TargetPath": "Views\\StudentTeachers\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14499,6 +14544,11 @@
     {
       "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Teachers/Edit.cshtml",
+      "TargetPath": "Views\\Teachers\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],

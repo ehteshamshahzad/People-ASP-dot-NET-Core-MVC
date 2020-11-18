@@ -10,23 +10,22 @@ using People.Models;
 
 namespace People.Controllers
 {
-    public class ContactInfosController : Controller
+    public class TeachersController : Controller
     {
         private readonly StudentContext _context;
 
-        public ContactInfosController(StudentContext context)
+        public TeachersController(StudentContext context)
         {
             _context = context;
         }
 
-        // GET: ContactInfos
+        // GET: Teachers
         public async Task<IActionResult> Index()
         {
-            var studentContext = _context.ContactInfos.Include(c => c.Student);
-            return View(await studentContext.ToListAsync());
+            return View(await _context.Teachers.ToListAsync());
         }
 
-        // GET: ContactInfos/Details/5
+        // GET: Teachers/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,40 +33,39 @@ namespace People.Controllers
                 return NotFound();
             }
 
-            var contactInfo = await _context.ContactInfos
-                .Include(c => c.Student)
+            var teacher = await _context.Teachers
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (contactInfo == null)
+            if (teacher == null)
             {
                 return NotFound();
             }
 
-            return View(contactInfo);
+            return View(teacher);
         }
 
-        // GET: ContactInfos/Create
+        // GET: Teachers/Create
         public IActionResult Create()
         {
-            ViewData["StudentID"] = new SelectList(_context.Students, "ID", "FullName");
             return View();
         }
 
-        // POST: ContactInfos/Create
+        // POST: Teachers/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Email,PhoneNumber,StudentID")] ContactInfo contactInfo)
+        public async Task<IActionResult> Create([Bind("ID,FullName")] Teacher teacher)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(contactInfo);
+                _context.Add(teacher);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["StudentID"] = new SelectList(_context.Students, "ID", "FullName", contactInfo.StudentID);
-            return View(contactInfo);
+            return View(teacher);
         }
 
-        // GET: ContactInfos/Edit/5
+        // GET: Teachers/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -75,21 +73,22 @@ namespace People.Controllers
                 return NotFound();
             }
 
-            var contactInfo = await _context.ContactInfos.FindAsync(id);
-            if (contactInfo == null)
+            var teacher = await _context.Teachers.FindAsync(id);
+            if (teacher == null)
             {
                 return NotFound();
             }
-            ViewData["StudentID"] = new SelectList(_context.Students, "ID", "FullName", contactInfo.StudentID);
-            return View(contactInfo);
+            return View(teacher);
         }
 
-        // POST: ContactInfos/Edit/5
+        // POST: Teachers/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Email,PhoneNumber,StudentID")] ContactInfo contactInfo)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,FullName")] Teacher teacher)
         {
-            if (id != contactInfo.ID)
+            if (id != teacher.ID)
             {
                 return NotFound();
             }
@@ -98,12 +97,12 @@ namespace People.Controllers
             {
                 try
                 {
-                    _context.Update(contactInfo);
+                    _context.Update(teacher);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ContactInfoExists(contactInfo.ID))
+                    if (!TeacherExists(teacher.ID))
                     {
                         return NotFound();
                     }
@@ -114,11 +113,10 @@ namespace People.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["StudentID"] = new SelectList(_context.Students, "ID", "FullName", contactInfo.StudentID);
-            return View(contactInfo);
+            return View(teacher);
         }
 
-        // GET: ContactInfos/Delete/5
+        // GET: Teachers/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -126,31 +124,30 @@ namespace People.Controllers
                 return NotFound();
             }
 
-            var contactInfo = await _context.ContactInfos
-                .Include(c => c.Student)
+            var teacher = await _context.Teachers
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (contactInfo == null)
+            if (teacher == null)
             {
                 return NotFound();
             }
 
-            return View(contactInfo);
+            return View(teacher);
         }
 
-        // POST: ContactInfos/Delete/5
+        // POST: Teachers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var contactInfo = await _context.ContactInfos.FindAsync(id);
-            _context.ContactInfos.Remove(contactInfo);
+            var teacher = await _context.Teachers.FindAsync(id);
+            _context.Teachers.Remove(teacher);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ContactInfoExists(int id)
+        private bool TeacherExists(int id)
         {
-            return _context.ContactInfos.Any(e => e.ID == id);
+            return _context.Teachers.Any(e => e.ID == id);
         }
     }
 }

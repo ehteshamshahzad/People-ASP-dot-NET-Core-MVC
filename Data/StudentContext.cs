@@ -12,6 +12,14 @@ namespace People.Data
 
         public DbSet<Student> Students { get; set; }
         public DbSet<ContactInfo> ContactInfos { get; set; }
-        public DbSet<Department> Departments { get; set; }        
+        public DbSet<Department> Departments { get; set; }      
+        public DbSet<Teacher> Teachers { get; set; }        
+        public DbSet<StudentTeacher> StudentTeachers { get; set; }   
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<StudentTeacher>()
+            .HasKey(st => new { st.StudentID, st.TeacherID });
+        }     
     }
 }
