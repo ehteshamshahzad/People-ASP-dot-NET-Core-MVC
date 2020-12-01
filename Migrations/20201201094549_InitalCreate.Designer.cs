@@ -8,8 +8,8 @@ using People.Data;
 namespace People.Migrations
 {
     [DbContext(typeof(UsersContext))]
-    [Migration("20201112163948_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20201201094549_InitalCreate")]
+    partial class InitalCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,13 +30,10 @@ namespace People.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(128);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("TEXT");

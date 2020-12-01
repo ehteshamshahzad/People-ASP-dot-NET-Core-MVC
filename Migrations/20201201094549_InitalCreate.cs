@@ -2,7 +2,7 @@
 
 namespace People.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitalCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,9 +12,9 @@ namespace People.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(maxLength: 128, nullable: false),
+                    Password = table.Column<string>(nullable: true),
                     PhoneNumber = table.Column<string>(nullable: true),
                     IsActive = table.Column<bool>(nullable: false)
                 },
