@@ -41,6 +41,14 @@ namespace People.Data
             return user;
         }
 
+        public IEnumerable<User> GetUsersByName(string name)
+        {
+            name = name.ToLower();
+            var allUsers = _context.Users.ToList();
+            var result = allUsers.FindAll(u => u.Name.Contains(name));
+            return result;
+        }
+
         public User UpdateUser(User user)
         {
             _context.Update(user);

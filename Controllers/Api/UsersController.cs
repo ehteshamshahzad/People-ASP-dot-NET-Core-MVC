@@ -49,7 +49,7 @@ namespace People.Controllers.Api
             _user.UpdateUser(user);
 
             return CreatedAtAction("GetUser", new { id = user.ID }, user);
-            }
+        }
 
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
@@ -64,6 +64,13 @@ namespace People.Controllers.Api
             _user.DeleteUser(id);
 
             return user;
+        }
+
+        [Route("name/{name}")]
+        [HttpGet]
+        public IEnumerable<User> GetUsersByTheirName(string name)
+        {
+            return _user.GetUsersByName(name);
         }
     }
 }
