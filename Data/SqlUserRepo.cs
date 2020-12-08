@@ -35,9 +35,9 @@ namespace People.Data
             return _context.Users.ToList();
         }
 
-        public User GetUserById(int id)
+        public User GetUserById(int? id)
         {
-            var user = _context.Users.Find(id);
+            var user = _context.Users.FirstOrDefault(m => m.ID == id);
             return user;
         }
 
