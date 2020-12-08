@@ -5,7 +5,7 @@ namespace People.Data
 {
     public class MockUserRepo : IUserRepo
     {
-        public List<User> users = new List<User>
+        private List<User> users = new List<User>
         {
             new User { ID = 1, Name = "James Bond", Email = "James@Bond.co.uk", Password = "00000007", PhoneNumber = "1234567890", IsActive = true},
             new User { ID = 2, Name = "Bruce Wayne", Email = "Batman@Wayne.com", Password = "Superman", PhoneNumber = "0987654321", IsActive = true},

@@ -10,7 +10,7 @@ namespace People.Data
 
         public SqlUserRepo(UsersContext context)
         {
-            context = _context;
+            _context = context;
         }
         public User CreateUser(User user)
         {

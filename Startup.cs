@@ -27,7 +27,11 @@ namespace People
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<UsersContext>(options =>options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
+            services.AddDbContext<UsersContext>(options => options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
+
+            // services.AddScoped<IUserRepo, MockUserRepo>();
+            services.AddScoped<IUserRepo, SqlUserRepo>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
