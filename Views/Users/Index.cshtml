@@ -7,7 +7,13 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <p>
+    <a asp-action="Create">Create New </a>
+    |
+    <a asp-action="Index"> Active Users </a>
+    |
+    <a asp-action="InActive"> InActive Users</a>
+</p>
 </p>
 <table class="table">
     <thead>
@@ -18,9 +24,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            @* <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.PhoneNumber)
             </th>
@@ -39,9 +42,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            @* <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td> *@
             <td>
                 @Html.DisplayFor(modelItem => item.PhoneNumber)
             </td>

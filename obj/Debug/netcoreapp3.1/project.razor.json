@@ -14417,6 +14417,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Users/InActive.cshtml",
+      "TargetPath": "Views\\Users\\InActive.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/ehteshamshahzad/Desktop/Project/People/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"

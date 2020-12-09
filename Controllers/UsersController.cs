@@ -22,7 +22,15 @@ namespace People.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Users.FromSqlRaw("select * from Users").ToListAsync());
+            bool IsActive = true;
+            return View(await _context.Users.FromSqlRaw($"select * from Users where IsActive={IsActive} ORDER BY Name ASC").ToListAsync());
+        }
+
+        // GET: Users/InActive
+        public async Task<IActionResult> InActive()
+        {
+            bool IsActive = false;
+            return View(await _context.Users.FromSqlRaw($"select * from Users where IsActive={IsActive} ORDER BY Name ASC").ToListAsync());
         }
 
         // GET: Users/Details/5
