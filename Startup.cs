@@ -25,9 +25,11 @@ namespace People
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages();
+
             services.AddControllersWithViews();
 
-            // services.AddDbContext<UsersContext>(options =>options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
+            services.AddDbContext<UsersContext>(options =>options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +38,7 @@ namespace People
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -55,7 +58,12 @@ namespace People
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }
 }
+
+/*
+dotnet aspnet-codegenerator identity -dc MyApplication.Data.ApplicationDbContext --files "Account.Register;Account.Login"
+*/
