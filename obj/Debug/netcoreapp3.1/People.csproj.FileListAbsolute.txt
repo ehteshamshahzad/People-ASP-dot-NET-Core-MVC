@@ -7,7 +7,6 @@
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/People.RazorAssemblyInfo.cs
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/appsettings.json
-/Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/People.deps.json
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/People.runtimeconfig.json
 /Users/ehteshamshahzad/Desktop/Project/People/bin/Debug/netcoreapp3.1/People.runtimeconfig.dev.json
@@ -174,3 +173,4 @@
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Users/Details.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Users/Edit.cshtml.g.cs
 /Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/Razor/Views/Users/Index.cshtml.g.cs
+/Users/ehteshamshahzad/Desktop/Project/People/obj/Debug/netcoreapp3.1/scopedcss/bundle/People.styles.css
