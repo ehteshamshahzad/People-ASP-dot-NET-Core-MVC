@@ -27,7 +27,7 @@ namespace People
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<UsersContext>(options =>options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
+            // services.AddDbContext<UsersContext>(options =>options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,8 +48,8 @@ namespace People
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -59,7 +59,3 @@ namespace People
         }
     }
 }
-// dotnet aspnet-codegenerator controller -name UsersController -m User -dc UsersContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
-// dotnet-ef migrations add InitialCreate
-// dotnet ef database update
-
