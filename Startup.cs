@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using People.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace People
 {
@@ -29,6 +30,9 @@ namespace People
 
             services.AddControllersWithViews();
 
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme) // Sets the default scheme to cookies
+                .AddCookie(options => options.LoginPath = "/Identity/Account/Login");
+
             services.AddDbContext<UsersContext>(options =>options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
         }
 
@@ -43,7 +47,6 @@ namespace People
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
