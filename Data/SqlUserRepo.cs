@@ -1,6 +1,10 @@
-using System.Collections.Generic;
 using System.Linq;
 using People.Models;
+using System.Threading.Tasks;
+using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace People.Data
 {
@@ -30,9 +34,9 @@ namespace People.Data
             return user;
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public async Task<IEnumerable<User>> GetAllUsers()
         {
-            return _context.Users.ToList();
+            return await _context.Users.ToListAsync();
         }
 
         public User GetUserById(int? id)

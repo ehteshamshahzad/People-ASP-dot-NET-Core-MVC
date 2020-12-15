@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using People.Models;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace People.Data
 {
@@ -12,7 +14,6 @@ namespace People.Data
             new User { ID = 3, Name = "Darth Vader", Email = "Darth@Empire.galaxy", Password = "Skywalker", PhoneNumber = "0987612345", IsActive = false},
             new User { ID = 4, Name = "Neo", Email = "Neo@Matrix.com", Password = "Password", PhoneNumber = "0000000000", IsActive = false},
             new User { ID = 5, Name = "Neo Keyanu", Email = "Neo@Matrix.com", Password = "Password", PhoneNumber = "0000000000", IsActive = true}
-
         };
 
         public User CreateUser(User user)
@@ -26,11 +27,6 @@ namespace People.Data
             var user = users.Find(result => result.ID == id);
             users.Remove(user);
             return user;
-        }
-
-        public IEnumerable<User> GetAllUsers()
-        {
-            return users;
         }
 
         public User GetUserById(int? id)
@@ -52,6 +48,11 @@ namespace People.Data
             users.Remove(oldUser);
             users.Add(user);
             return user;
+        }
+
+        public async Task<IEnumerable<User>> GetAllUsers()
+        {
+            return users;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using People.Data;
@@ -20,9 +21,10 @@ namespace People.Controllers.Api
 
         // GET: api/Users
         [HttpGet]
-        public IEnumerable<User> GetUsers()
+        public async Task<IEnumerable<User>> GetUsers()
         {
-            return _user.GetAllUsers();
+            var result = await _user.GetAllUsers();
+            return result;
         }
 
         // GET: api/Users/5

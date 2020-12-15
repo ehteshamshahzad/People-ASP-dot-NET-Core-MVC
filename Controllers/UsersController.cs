@@ -1,24 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
 using People.Data;
 using People.Models;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace People.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly UsersContext _context;
         private readonly IUserRepo _user;
 
-        public UsersController(UsersContext context, IUserRepo user)
+        public UsersController(IUserRepo user)
         {
-            _context = context;
             _user = user;
         }
 
         // GET: Users
-        public IActionResult Index()
-        {
-            return View(_user.GetAllUsers());
+        public async Task<IActionResult> Index()
+        {   
+            return View(await _user.GetAllUsers());
         }
 
         // GET: Users/Details/5
