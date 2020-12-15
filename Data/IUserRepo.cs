@@ -7,11 +7,11 @@ namespace People.Data
 {
     public interface IUserRepo
     {
-        User CreateUser(User user);
+        Task<User> CreateUser(User user);
         Task<IEnumerable<User>> GetAllUsers();
-        User GetUserById(int? id);
-        User UpdateUser(User user);
-        User DeleteUser(int id);
-        IEnumerable<User> GetUsersByName(string name);
+        Task<User> GetUserById(int? id);
+        Task<User> UpdateUser(User user);
+        Task<User> DeleteUser(int id);
+        Task<IEnumerable<User>> GetUsersByName(string name);
     }
 }

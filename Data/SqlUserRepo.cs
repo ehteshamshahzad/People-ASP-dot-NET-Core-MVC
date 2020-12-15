@@ -16,20 +16,20 @@ namespace People.Data
         {
             _context = context;
         }
-        public User CreateUser(User user)
+        public async Task<User> CreateUser(User user)
         {
             _context.Users.Add(user);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return user;
         }
 
-        public User DeleteUser(int id)
+        public async Task<User> DeleteUser(int id)
         {
-            var user = _context.Users.Find(id);
+            var user = await _context.Users.FindAsync(id);
 
             _context.Users.Remove(user);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return user;
         }
@@ -39,24 +39,23 @@ namespace People.Data
             return await _context.Users.ToListAsync();
         }
 
-        public User GetUserById(int? id)
+        public async Task<User> GetUserById(int? id)
         {
-            var user = _context.Users.FirstOrDefault(m => m.ID == id);
-            return user;
+            return await _context.Users.FirstOrDefaultAsync(m => m.ID == id);
         }
 
-        public IEnumerable<User> GetUsersByName(string name)
+        public async Task<IEnumerable<User>> GetUsersByName(string name)
         {
             name = name.ToLower();
-            var allUsers = _context.Users.ToList();
-            var result = allUsers.FindAll(u => u.Name.Contains(name));
+            var allUsers = await _context.Users.ToListAsync();
+            var result = allUsers.FindAll(u => u.Name.ToLower().Contains(name));
             return result;
         }
 
-        public User UpdateUser(User user)
+        public async Task<User> UpdateUser(User user)
         {
             _context.Update(user);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return user;
         }

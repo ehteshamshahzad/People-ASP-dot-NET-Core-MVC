@@ -29,9 +29,9 @@ namespace People.Controllers.Api
 
         // GET: api/Users/5
         [HttpGet("{id}")]
-        public ActionResult<User> GetUser(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-            var user = _user.GetUserById(id);
+            var user = await _user.GetUserById(id);
 
             if (user == null)
             {
@@ -42,37 +42,37 @@ namespace People.Controllers.Api
 
         // PUT: api/Users/5
         [HttpPut("{id}")]
-        public IActionResult PutUser(int id, User user)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.ID)
             {
                 return BadRequest();
             }
-            _user.UpdateUser(user);
+            await _user.UpdateUser(user);
 
             return CreatedAtAction("GetUser", new { id = user.ID }, user);
         }
 
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public ActionResult<User> DeleteUser(int id)
+        public async Task<ActionResult<User>> DeleteUser(int id)
         {
-            var user = _user.GetUserById(id);
+            var user = await _user.GetUserById(id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            _user.DeleteUser(id);
+            await _user.DeleteUser(id);
 
             return user;
         }
 
         [Route("name/{name}")]
         [HttpGet]
-        public IEnumerable<User> GetUsersByTheirName(string name)
+        public async Task<IEnumerable<User>> GetUsersByTheirName(string name)
         {
-            return _user.GetUsersByName(name);
+            return await _user.GetUsersByName(name);
         }
     }
 }

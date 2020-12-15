@@ -16,33 +16,33 @@ namespace People.Data
             new User { ID = 5, Name = "Neo Keyanu", Email = "Neo@Matrix.com", Password = "Password", PhoneNumber = "0000000000", IsActive = true}
         };
 
-        public User CreateUser(User user)
+        public async Task<User> CreateUser(User user)
         {
             users.Add(user);
             return user;
         }
 
-        public User DeleteUser(int id)
+        public async Task<User> DeleteUser(int id)
         {
             var user = users.Find(result => result.ID == id);
             users.Remove(user);
             return user;
         }
 
-        public User GetUserById(int? id)
+        public async Task<User> GetUserById(int? id)
         {
             var user = users.Find(result => result.ID == id);
             return user;
         }
 
-        public IEnumerable<User> GetUsersByName(string name)
+        public async Task<IEnumerable<User>> GetUsersByName(string name)
         {
             name = name.ToLower();
             var result = users.FindAll(u => u.Name.ToLower().Contains(name));
             return result;
         }
 
-        public User UpdateUser(User user)
+        public async Task<User> UpdateUser(User user)
         {
             var oldUser = users.Find(result => result.ID == user.ID);
             users.Remove(oldUser);

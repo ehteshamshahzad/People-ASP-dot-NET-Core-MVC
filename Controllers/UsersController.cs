@@ -22,14 +22,14 @@ namespace People.Controllers
         }
 
         // GET: Users/Details/5
-        public IActionResult Details(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var user = _user.GetUserById(id);
+            var user = await _user.GetUserById(id);
             if (user == null)
             {
                 return NotFound();
@@ -47,12 +47,12 @@ namespace People.Controllers
         // POST: Users/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("ID,Name,Email,Password,PhoneNumber,IsActive")] User user)
+        public async Task<IActionResult> Create([Bind("ID,Name,Email,Password,PhoneNumber,IsActive")] User user)
         {
             if (ModelState.IsValid)
             {
                 user.IsActive = true;
-                _user.CreateUser(user);
+                await _user.CreateUser(user);
 
                 // _context.Add(user);
                 // await _context.SaveChangesAsync();
@@ -62,14 +62,14 @@ namespace People.Controllers
         }
 
         // GET: Users/Edit/5
-        public IActionResult Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var user = _user.GetUserById(id);
+            var user = await _user.GetUserById(id);
             if (user == null)
             {
                 return NotFound();
@@ -80,7 +80,7 @@ namespace People.Controllers
         // POST: Users/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind("ID,Name,Email,Password,PhoneNumber,IsActive")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Email,Password,PhoneNumber,IsActive")] User user)
         {
             if (id != user.ID)
             {
@@ -89,7 +89,7 @@ namespace People.Controllers
 
             if (ModelState.IsValid)
             {
-                _user.UpdateUser(user);
+                await _user.UpdateUser(user);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -97,14 +97,14 @@ namespace People.Controllers
         }
 
         // GET: Users/Delete/5
-        public IActionResult Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var user = _user.GetUserById(id);
+            var user = await _user.GetUserById(id);
             if (user == null)
             {
                 return NotFound();
@@ -116,9 +116,9 @@ namespace People.Controllers
         // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _user.DeleteUser(id);
+            await _user.DeleteUser(id);
             return RedirectToAction(nameof(Index));
         }
     }
