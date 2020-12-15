@@ -75,4 +75,4 @@ namespace People.Controllers.Api
             return await _user.GetUsersByName(name);
         }
     }
-}
+

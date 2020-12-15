@@ -29,8 +29,8 @@ namespace People
 
             services.AddDbContext<UsersContext>(options => options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
 
-            // services.AddScoped<IUserRepo, MockUserRepo>();
-            services.AddScoped<IUserRepo, SqlUserRepo>();
+            services.AddScoped<IUserRepo, MockUserRepo>();
+            // services.AddScoped<IUserRepo, SqlUserRepo>();
 
         }
 
